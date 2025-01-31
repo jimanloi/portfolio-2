@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Chewy&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --border-color: #000;
+  --body-font: roboto, serif;
+  --heading-font: chewy, serif;
+}
+
+body {
+  background-color: #fff;
+  font-family: var(--body-font);
+}
+
+.my-pic {
+  width: 26%;
+  height: auto;
+}
+
+.my-pic img {
+  padding-top: 20px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.intro {
+  position: fixed;
+  justify-self: center;
+  width: 80vw;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffff;
+  justify-items: center;
+  z-index: 999;
+}
+
+.intro h1 {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+}
+
+#my-title {
+  font-family: "Caveat Brush", serif;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.intro p {
+  width: 60vw;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.contact-button {
+  font-family: roboto, serif;
+  font-weight: 800;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 50px;
+  border-style: dotted;
+  background-color: #e1e1e1;
+}
+
+.contact-button:hover {
+  cursor: pointer;
+  background-color: #c0c0c0;
+  transition: 0.5s;
+}
+
+/* Nav bar */
+
+.about-tag {
+  position: absolute;
+  top: 25px;
+  right: 215px;
+  width: 60px;
+  height: 30px;
+  border: #000;
+  background: #ffff;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  padding-top: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.about-tag:hover {
+  cursor: pointer;
+  color: #4a4a4a;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.contact-tag {
+  position: fixed;
+  top: 25px;
+  right: 80px;
+  width: 65px;
+  height: 30px;
+  background: #bdbdbd;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  padding-top: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.contact-tag:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.work-tag {
+  position: fixed;
+  top: 25px;
+  right: 147px;
+  width: 65px;
+  height: 30px;
+  background: #ececec;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  padding-top: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.work-tag:hover {
+  cursor: pointer;
+  color: #4a4a4a;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+/* border-frame */
+
+.top-border {
+  display: block;
+  background-color: var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+}
+
+.bottom-border {
+  display: block;
+  background-color: var(--border-color);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+}
+
+.left-border {
+  display: block;
+  background-color: var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50px;
+}
+
+.right-border {
+  display: block;
+  background-color: var(--border-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50px;
+}
