@@ -12,12 +12,12 @@ body {
 }
 
 .my-pic {
-  width: 26%;
+  max-width: 20%;
   height: auto;
 }
 
 .my-pic img {
-  padding-top: 20px;
+  padding-top: 10px;
   width: 100%;
   object-fit: cover;
   border-radius: 100%;
@@ -26,13 +26,16 @@ body {
 .intro {
   position: fixed;
   justify-self: center;
-  width: 80vw;
+  width: 90vw;
+  height: auto;
   top: 50px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffff;
   justify-items: center;
   z-index: 999;
+  overflow: visible;
 }
 
 .intro h1 {
@@ -50,7 +53,7 @@ body {
   width: 60vw;
   font-size: 14px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .contact-button {
