@@ -1,1 +1,12 @@
-@import url("./something.css");
+@import url("./landing-page.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
