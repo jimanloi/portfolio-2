@@ -24,7 +24,7 @@ main {
 }
 
 .my-pic img {
-  padding-top: 20px;
+  padding-top: 10px;
   width: 100%;
   object-fit: cover;
   border-radius: 100%;
@@ -57,7 +57,7 @@ main {
   width: 60vw;
   font-size: 1rem;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .contact-button {
