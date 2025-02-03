@@ -7,12 +7,19 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #000;
   font-family: var(--body-font);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
 .my-pic {
-  max-width: 20%;
+  max-width: 25%;
   height: auto;
 }
 
@@ -25,17 +32,14 @@ body {
 
 .intro {
   position: fixed;
+  top: 6%;
   justify-self: center;
-  width: 90vw;
-  height: auto;
-  top: 50px;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 89vw;
+  height: 85vh;
   background-color: #ffff;
   justify-items: center;
   z-index: 999;
-  overflow: visible;
+  overflow: scroll;
 }
 
 .intro h1 {
@@ -45,13 +49,13 @@ body {
 
 #my-title {
   font-family: "Caveat Brush", serif;
-  font-size: 30px;
+  font-size: 2rem;
   padding-bottom: 20px;
 }
 
 .intro p {
   width: 60vw;
-  font-size: 14px;
+  font-size: 1rem;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -64,6 +68,8 @@ body {
   border-radius: 50px;
   border-style: dotted;
   background-color: #e1e1e1;
+  margin-bottom: 20px;
+  animation: bounce 0.6s ease-in-out 0.2s infinite;
 }
 
 .contact-button:hover {
@@ -72,22 +78,46 @@ body {
   transition: 0.5s;
 }
 
+@keyframes bounce {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
 /* Nav bar */
 
+.navbar {
+  background-color: #000;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer-container a {
+  color: #ffff;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.navbar a:hover {
+  transform: scale(1.05);
+}
+
 .about-tag {
-  position: absolute;
-  top: 25px;
+  position: fixed;
   right: 215px;
   width: 60px;
   height: 30px;
   border: #000;
   background: #ffff;
-  text-align: center;
   text-decoration: none;
   color: #000;
-  padding-top: 5px;
   border-radius: 5px;
-  font-size: 15px;
+  padding-top: 4px;
 }
 
 .about-tag:hover {
@@ -99,7 +129,6 @@ body {
 
 .contact-tag {
   position: fixed;
-  top: 25px;
   right: 80px;
   width: 65px;
   height: 30px;
@@ -107,9 +136,8 @@ body {
   text-align: center;
   text-decoration: none;
   color: #000;
-  padding-top: 5px;
   border-radius: 5px;
-  font-size: 15px;
+  padding-top: 4px;
 }
 
 .contact-tag:hover {
@@ -120,17 +148,14 @@ body {
 
 .work-tag {
   position: fixed;
-  top: 25px;
   right: 147px;
   width: 65px;
   height: 30px;
   background: #ececec;
-  text-align: center;
+  padding-top: 4px;
   text-decoration: none;
   color: #000;
-  padding-top: 5px;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: 4px;
 }
 
 .work-tag:hover {
@@ -138,6 +163,11 @@ body {
   color: #4a4a4a;
   text-decoration: underline;
   transition: 0.5s;
+}
+
+.about-tag:active .work-tag:active .contact-tag:active {
+  text-decoration: underline;
+  color: #2724d0;
 }
 
 /* border-frame */
@@ -149,7 +179,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 50px;
+  height: 5%;
 }
 
 .bottom-border {
@@ -159,7 +189,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 50px;
+  height: 10%;
+  z-index: 1000;
 }
 
 .left-border {
@@ -169,7 +200,7 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 50px;
+  width: 5%;
 }
 
 .right-border {
@@ -179,5 +210,168 @@ body {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 50px;
+  width: 5%;
+}
+
+.footer-container {
+  display: flex;
+  height: 95%;
+  justify-content: right;
+  align-items: center;
+  margin-right: 10%;
+}
+
+/* Responsive Design */
+
+/* =========== Mobile first ======== */
+
+/* Mobile S */
+
+@media (width >= 320px) {
+  .intro h1 {
+    font-size: 3rem;
+  }
+
+  #my-title {
+    font-size: 1rem;
+  }
+
+  .intro p {
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+  }
+
+  .contact-button {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    font-size: 0.7rem;
+  }
+
+  .navbar a {
+    top: 2%;
+  }
+}
+
+/* Mobile M */
+
+@media (width >= 375px) {
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  #my-title {
+    font-size: 1rem;
+  }
+
+  .intro p {
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+  }
+}
+
+/* Mobile L */
+
+@media (width >= 425px) {
+  #my-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet */
+
+/* @media (width >= 768px) {
+} */
+
+/* Laptop */
+@media (width >= 1024px) {
+  .intro p {
+    font-size: 0.9rem;
+  }
+
+  #my-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop */
+@media (width >= 1440px) {
+  .intro h1 {
+    font-size: 5rem;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+  }
+
+  #my-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-button {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    transform: translate(-30px, 25px);
+    font-size: 1rem;
+  }
+
+  .about-tag {
+    width: 75px;
+    right: 250px;
+  }
+
+  .work-tag {
+    width: 75px;
+    right: 170px;
+  }
+
+  .contact-tag {
+    width: 75px;
+    right: 90px;
+  }
+
+  .intro {
+    position: fixed;
+    top: 6.5%;
+    height: 83vh;
+  }
+}
+
+/* 4K screen */
+@media (width >= 2560px) {
+  .navbar {
+    transform: translate(-200px, 45px);
+    font-size: 1rem;
+  }
+
+  .navbar a {
+    transform: scale(1.2);
+    width: 85px;
+    height: 60px;
+    font-size: 1.2rem;
+    padding-top: 5px;
+  }
+
+  .about-tag {
+    right: 280px;
+  }
+
+  .work-tag {
+    right: 170px;
+  }
+
+  .contact-tag {
+    right: 60px;
+  }
+
+  .intro p {
+    font-size: 1.7rem;
+  }
 }
